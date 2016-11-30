@@ -27,24 +27,18 @@ class Exercise
   def self.even_fibonacci(nth)
     count = nth - 3
     i = 0
-    j = 1
-    fib = [i+1,j]
+    fib = [i+1,i+1]
+    even = []
 
-    until count < 0
-      sum = fib[i] + fib[j]
+    until count <= 0
+      sum = fib[i] + fib[i + 1]
       fib.push(sum)
+      even.push(sum) if sum % 2 == 0
       count-=1
       i+=1
-      j+=1
     end
-
-    even = []
-    fib.each do |num|
-      if num % 2 == 0
-        even.push(num)
-      end
-    end
-
-    even.inject {|sum, num| sum + num} 
+      
+    even.reduce(:+)
   end
+
 end
