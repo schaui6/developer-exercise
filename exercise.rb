@@ -25,7 +25,26 @@ class Exercise
     # return the sum
 
   def self.even_fibonacci(nth)
-    # TODO: Implement this method
-  end
+    count = nth - 3
+    i = 0
+    j = 1
+    fib = [i+1,j]
 
+    until count < 0
+      sum = fib[i] + fib[j]
+      fib.push(sum)
+      count-=1
+      i+=1
+      j+=1
+    end
+
+    even = []
+    fib.each do |num|
+      if num % 2 == 0
+        even.push(num)
+      end
+    end
+
+    even.inject {|sum, num| sum + num} 
+  end
 end
