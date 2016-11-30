@@ -4,6 +4,21 @@ class Exercise
   # Return a string in which every word in "str" that exceeds 4 characters is replaced with "marklar".
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
 
+  #Pseudocode
+    # Assumptions: 
+      # "str" is a sequence of words separated by spaces
+      # input is a string - "The quick brown fox"
+      # output is a marklarized string that retains end of word punctuation and capitalization - "The marklar marklar fox"
+    # separate string into words
+    # create an array to store the marklarized string
+    # look at each word in the string to determine if it should be marklarized
+      # all words more than 4 characters in length should be marklarized
+    # Reassign the word's value to 'marklar'
+      # if the word is capitalized, reassign value to 'Marklar'
+      # if the word has an end-of-word punctuation, store the punctuation in a variable, reassign the word's value to marklar + variable
+    # Add each word into the output array, and if the word is marklarized, place the marklarized word instead
+    # join the output array to make it one string
+    # return the output
 
   def self.marklar(str)
     # TODO: Implement this method
@@ -15,7 +30,7 @@ class Exercise
   # and the sum of its even numbers is (2 + 8) = 10
   
   #Pseudocode
-    # Assumption: 
+    # Assumptions: 
       # fibonacci sequence begins with 1 and 1
       # input is an integer (target number of elements fibonacci sequence)
       # output is an integer (sum of all even elements in target number of fibonacci sequence)
