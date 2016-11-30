@@ -4,6 +4,7 @@ class Exercise
   # Return a string in which every word in "str" that exceeds 4 characters is replaced with "marklar".
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
 
+
   def self.marklar(str)
     # TODO: Implement this method
   end
@@ -14,7 +15,10 @@ class Exercise
   # and the sum of its even numbers is (2 + 8) = 10
   
   #Pseudocode
-    # Assumption: fibonacci sequence begins with 1 and 1
+    # Assumption: 
+      # fibonacci sequence begins with 1 and 1
+      # input is an integer (target number of elements fibonacci sequence)
+      # output is an integer (sum of all even elements in target number of fibonacci sequence)
     # create an fibonacci array and place starting values
     # iterate through array n times
     # sum elements in last position and last position - 1
